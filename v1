@@ -1,0 +1,51 @@
+abstract class Hare {
+    abstract void eat();
+    abstract void sleep();
+    abstract void sound();
+}
+
+class Wolf extends Hare {
+    public void eat() {
+        System.out.println("Волк ест.");
+    }
+
+    public void sleep() {
+        System.out.println("Волк спит.");
+    }
+
+    public void sound() {
+        System.out.println("РРРРРРР");
+    }
+}
+
+
+
+public class AnimalProgram {
+    public static void main(String[] args) {
+        Hare hare = new Hare() {
+            public void eat() {
+                System.out.println("Заяц ест.");
+            }
+
+            public void sleep() {
+                System.out.println("Заяц спит.");
+            }
+
+            public void sound() {
+                System.out.println("ТОПТОПТОП");
+            }
+        };
+
+        Wolf wolf = new Wolf();
+
+        hare.eat();
+        hare.sleep();
+        hare.sound();
+
+        wolf.eat();
+        wolf.sleep();
+        wolf.sound();
+
+
+    }
+}
